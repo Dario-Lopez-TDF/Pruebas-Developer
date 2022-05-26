@@ -1,0 +1,50 @@
+/*
+Tarea entregable - Estructura de datos
+*- Promedio escolar-*
+• Desarrolle un algoritmo que permita cargar alumnos y sus
+notas en los tres trimestres
+• Se debe permitir obtener el promedio anual (es decir, de sus
+tres notas) de un alumno (ingresado por el usuario)
+• Luego de resolverlo, pensar en aprovechar métodos y discutir
+como representar la información
+*/
+
+// defino la cantidad de alumnos de la clase
+let cantAlumnos:number=Number(prompt("Cantidad de Alumnos"));
+// defino los Arrays con longitud  cantidad de alumnos "cantAlumnos"
+let alumnos:string[]=new Array(cantAlumnos);
+let nota1:number[]=new Array(cantAlumnos);
+let nota2:number[]=new Array(cantAlumnos);
+let nota3:number[]=new Array(cantAlumnos);
+let i:number;
+
+//bucle para la carga de nombres de los alumnos y sus notas
+for(let i=0;i<cantAlumnos;i++){
+  let alumnos[i]=prompt("Nombre del alumno");
+  let nota1[i]=Number(prompt("nota primer trimestre"));
+  let nota2[i]=Number(prompt("nota segundo trimestre"));
+  let nota3[i]=Number(prompt("nota tercer trimestre"));
+}
+
+// variables para buscar el alumno y calcular el promedio
+let buscarAlumno:string=prompt("BUSCAR ALUMNO: ");
+let existeAlumno:boolean = false;
+let promedio:number=0;
+let i=0;
+// bucle para buscar el alumno y calcular el promedio
+while (i<cantAlumnos && !existeAlumno){
+  if(alumnos[i]==buscarAlumno){
+    existeAlumno=true;
+    promedio=nota1[i]+nota2[i]+nota3[i];
+    promedio/=3;
+  }
+  i++;
+}
+
+//se debe verificar la existencia del alumno con un if y mostrarlo por consola
+if(existeAlumno){
+  console.log("La nota promedio de: ",buscarAlumno, "es: ",promedio);
+} else{
+  console.log("No se encontró a: ",buscarAlumno);
+}
+
