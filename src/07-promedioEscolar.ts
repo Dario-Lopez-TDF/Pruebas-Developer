@@ -36,8 +36,8 @@ let i = 0;
 while (i < cantAlumnos && !existeAlumno) {
   if (alumnos[i] === buscarAlumno) {
     existeAlumno = true;
-    promedio = nota1[i] + nota2[i] + nota3[i];
-    promedio /= 3;
+    promedio = (nota1[i] + nota2[i] + nota3[i]) / 3;
+    //promedio /= 3;
   }
   i++;
 }
