@@ -1,8 +1,8 @@
 // clase viernes 20 de Mayo
 // Arrays
-/*
 
-1
+
+
 let arregloA: number[] = new Array(6);
 let arregloB: number[] = new Array(6);
 // El array (arregloSuma) debe contener la suma de los datos de arregloA y arregloB
@@ -25,7 +25,7 @@ for (let i: number = 0; i < 6; i++) {
 
 
 
-
+/*
 
 //Numeros al azar "Math.ramdom / Math.floor" (falta el programa)
 //Ejercicio – Completar Arreglo
@@ -36,7 +36,7 @@ for (let i: number = 0; i < 6; i++) {
 //• Para obtener números aleatorios crear una función
 //Azar, que se base en las funciones disponibles
 // en el paquete Math: -Math.random() devuelve un nro al azar entre 0 y 1.
-*/
+
 function azar(): number {
   return Math.floor(Math.random() * 100); //Numeros al azar "Math.ramdom / Math.floor"
 }
