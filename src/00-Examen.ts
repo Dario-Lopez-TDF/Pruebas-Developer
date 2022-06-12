@@ -6,7 +6,7 @@ arr = new Array(elem);
 cargar(arr, elem);
 nro = Number(prompt("ingrese numero: ")); //nro ya esta tipeado antes y el tipo number es sin mayusculas
 ocu = metodo(arr, elem, nro);
-console.log("el Numero: " + nro + " ... " + ocu);
+console.log("el Numero oculto es:", nro + elem + ocu);
 mostrar(arr, elem);
 
 function cargar(v, l): void {
@@ -25,8 +25,12 @@ function mostrar(v, l): void {
   //console.log(c);
 }
 
-function metodo(v, l, n): void {
+function metodo(v, l, n): number {
   //es una funcion de tipo namber pero le falta el return
-  let oc: number;
-  for (let i = 0; i < l; i++) if ((v[i] = n)) oc++;
+  let oc: number=0;
+  for (let i = 0; i < l; i++) {
+    if (v[i] = n){
+      oc++;
+    }
+    return oc;
 }
